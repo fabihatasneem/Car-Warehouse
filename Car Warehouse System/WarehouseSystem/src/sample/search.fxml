@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, #5fb9ff, #5fffaf)" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SearchController">
+   <children>
+      <Label layoutX="332.0" layoutY="25.0" text="Search Car">
+         <font>
+            <Font name="Rockwell Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="127.0" layoutY="100.0" text="Registration Number :">
+         <font>
+            <Font name="Rockwell Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="471.0" layoutY="100.0" text="Car Maker :">
+         <font>
+            <Font name="Rockwell Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="472.0" layoutY="174.0" text="Car Model :">
+         <font>
+            <Font name="Rockwell Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchRegField" layoutX="132.0" layoutY="130.0" />
+      <TextField fx:id="searchMakeField" layoutX="431.0" layoutY="132.0" />
+      <TextField fx:id="searchModelField" layoutX="431.0" layoutY="200.0" />
+      <Button fx:id="searchRegButton" layoutX="193.0" layoutY="174.0" mnemonicParsing="false" onAction="#searchByReg" text="Search" >
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="searchModelButton" layoutX="492.0" layoutY="244.0" mnemonicParsing="false" onAction="#searchByModel" text="Search" >
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="187.0" layoutY="66.0" text="Option 1">
+         <font>
+            <Font name="Rockwell Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="487.0" layoutY="66.0" text="Option 2">
+      <font>
+         <Font name="Rockwell Bold" size="18.0" />
+      </font>
+      </Label>
+      <TableView fx:id="searchTable" layoutX="13.0" layoutY="307.0" prefHeight="284.0" prefWidth="773.0">
+         <columns>
+            <TableColumn fx:id="regColumn" prefWidth="113.0" styleClass="column-header-background, table-row-cell, odd" text="Registration">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Registration" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="yearColumn" minWidth="3.0" prefWidth="77.0" styleClass="column-header-background, table-row-cell, even" text="Year">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Year" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="makerColumn" minWidth="4.0" prefWidth="86.0" styleClass="column-header-background, table-row-cell, odd" text="Maker">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Make" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="modelColumn" prefWidth="91.0" styleClass="column-header-background, table-row-cell, even" text="Model">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Model" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="color1Column" styleClass="column-header-background, table-row-cell, odd" text="Color 1">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Color1" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="color2Column" prefWidth="75.0" styleClass="column-header-background, table-row-cell, even" text="Color 2">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Color2" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="color3Column" prefWidth="88.0" styleClass="column-header-background, table-row-cell, odd" text="Color 3">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Color3" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="priceColumn" prefWidth="83.0" styleClass="column-header-background, table-row-cell, even" text="Price">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Price" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="quantityColumn" prefWidth="79.0" styleClass="column-header-background, table-row-cell, odd" text="Quantity">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Quantity" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <Button fx:id="backButton" layoutX="27.0" layoutY="25.0" mnemonicParsing="false" onAction="#backAction" text="Back" >
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

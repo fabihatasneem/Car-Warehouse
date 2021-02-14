@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="850.0" style="-fx-background-color: #6bd8ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ManufacturerViewController">
+   <children>
+      <Label layoutX="185.0" layoutY="14.0" text="Car Warehouse : Manufacturer View">
+         <font>
+            <Font name="Rockwell Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="addButton" layoutX="199.0" layoutY="538.0" mnemonicParsing="false" onAction="#addNewCarAction" text="Add New Car">
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="570.0" layoutY="538.0" mnemonicParsing="false" onAction="#deleteCarAction" text="Delete">
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Button>
+      <TableView fx:id="manufacturerTable" layoutX="9.0" layoutY="52.0" prefHeight="462.0" prefWidth="830.0" style="-fx-background-color: transparent">
+         <columns>
+            <TableColumn fx:id="regColumn" prefWidth="107.0" styleClass="column-header-background, table-row-cell, odd" text="Registration">
+               <cellFactory>
+               </cellFactory>
+               <cellValueFactory>
+                  <PropertyValueFactory property="Registration" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="yearColumn" minWidth="3.0" prefWidth="83.0" styleClass="column-header-background, table-row-cell, even" text="Year">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Year" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="makerColumn" minWidth="4.0" prefWidth="121.0" styleClass="column-header-background, table-row-cell, odd" text="Maker">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Make" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="modelColumn" prefWidth="101.0" styleClass="column-header-background, table-row-cell, even" text="Model">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Model" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="color1Column" prefWidth="79.0" styleClass="column-header-background, table-row-cell, odd" text="Color 1">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Color1" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="color2Column" prefWidth="78.0" styleClass="column-header-background, table-row-cell, even" text="Color 2">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Color2" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="color3Column" prefWidth="85.0" styleClass="column-header-background, table-row-cell, odd" text="Color 3">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Color3" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="priceColumn" prefWidth="75.0" styleClass="column-header-background, table-row-cell, even" text="Price">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Price" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="quantityColumn" prefWidth="101.0" styleClass="column-header-background, table-row-cell, odd" text="Quantity">
+               <cellValueFactory>
+                  <PropertyValueFactory property="Quantity" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </TableView>
+      <Button fx:id="refreshButton" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#refreshAction" text="Refresh">
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

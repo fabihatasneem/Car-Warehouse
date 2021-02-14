@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="530.0" prefWidth="428.0" style="-fx-background-color: linear-gradient(to bottom, #5fb9ff, #5fffaf)" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddController">
+   <children>
+      <Label layoutX="138.0" layoutY="24.0" text="Add New Car">
+         <font>
+            <Font name="Rockwell Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="85.0" text="Registration Number :" >
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="128.0" text="Year :" >
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="175.0" text="Car Maker :" >
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="217.0" text="Car Model :" >
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="264.0" text="Color 1 :" >
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="123.0" layoutY="392.0" text="Price :" >
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="305.0" text="Color 2 :" >
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="347.0" text="Color 3 :" >
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="95.0" layoutY="435.0" text="Quantity :" >
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="regField" layoutX="224.0" layoutY="80.0" promptText="Cannot Be Empty" />
+      <TextField fx:id="yearField" layoutX="224.0" layoutY="123.0" promptText="Cannot Be Empty" />
+      <TextField fx:id="makerField" layoutX="224.0" layoutY="170.0" promptText="Cannot Be Empty" />
+      <TextField fx:id="modelField" layoutX="224.0" layoutY="212.0" promptText="Cannot Be Empty" />
+      <TextField fx:id="color2Field" layoutX="224.0" layoutY="300.0" />
+      <TextField fx:id="color1Field" layoutX="224.0" layoutY="259.0" />
+      <TextField fx:id="color3Field" layoutX="224.0" layoutY="342.0" />
+      <TextField fx:id="priceField" layoutX="224.0" layoutY="387.0" promptText="Numbers Only" />
+      <TextField fx:id="quantityField" layoutX="224.0" layoutY="430.0" promptText="Numbers Only" />
+      <Button fx:id="addButton" layoutX="177.0" layoutY="481.0" mnemonicParsing="false" onAction="#addAction" text="Add Car" >
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="backButton" layoutX="20.0" layoutY="24.0" mnemonicParsing="false" onAction="#backAction" text="Back" >
+         <font>
+            <Font name="Rockwell Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
